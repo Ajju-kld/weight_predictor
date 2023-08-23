@@ -17,4 +17,4 @@ def hello():
 def lbs():
       return render_template('lbs.html')
 if __name__=="__main__":
-        app.run(debug=True)
+        app.run()
