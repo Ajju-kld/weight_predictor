@@ -3,18 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-left: 2.4rem;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 80%;
+            margin-left: 2.4rem;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <title>Weight Predictor</title>
 </head>
 <body>
-  <h1>Weight predictor</h1>
-  <div class="form_border">
-  <form action="/" method="post">
-
-    <label>height</label>
-<input type="number" placeholder="enter the height (in inches)" id="height" name="height">
-<button type="submit" class="submit">submit</button>
-  </form></div>
-<h3>Weight is {{hei}}</h3>
+    <div class="container">
+        <h1>Weight Predictor</h1>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="height">Height (in cms)</label>
+                <input type="number" id="height" name="height" placeholder="Enter the height">
+            </div>
+            <button type="submit" class="submit-btn">Predict Weight</button>
+        </form>
+        <div class="result">Weight: {{hei}} (In kgs)</div>
+    </div>
 </body>
 </html>

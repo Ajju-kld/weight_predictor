@@ -6,9 +6,9 @@ app=Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def hello():
       if request.method =='POST':
-            height=request.form['height']
-            weight=ht.predict([[float(height)]])
-            print(type(weight))
+            height=ht.cm_to_inches(request.form['height'])
+            weight=ht.pounds_to_kg(ht.predict([[float(height)]]))
+            
             return render_template('index.html',hei=weight)
       return render_template('index.html')
 
