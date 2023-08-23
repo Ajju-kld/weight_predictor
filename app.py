@@ -8,7 +8,7 @@ def hello():
       if request.method =='POST':
             height=request.form['height']
             weight=ht.predict([[float(height)]])
-            print(weight)
+            print(type(weight))
             return render_template('index.html',hei=weight)
       return render_template('index.html')
 
