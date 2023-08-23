@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-  <h1>Hello kutta</h1>
-  
-  <form action="post">
+  <h1>Weight predictor</h1>
+  <div class="form_border">
+  <form action="/" method="post">
 
-<input type="text">
-
-  </form>
+    <label>height</label>
+<input type="number" placeholder="enter the height (in inches)" id="height" name="height">
+<button type="submit" class="submit">submit</button>
+  </form></div>
+<h3>Weight is {{hei}}</h3>
 </body>
 </html>
